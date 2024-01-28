@@ -37,6 +37,7 @@ return array(
     'App\\Http\\Requests\\UpdateProjectRequest' => $baseDir . '/app/Http/Requests/UpdateProjectRequest.php',
     'App\\Models\\Project' => $baseDir . '/app/Models/Project.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\type' => $baseDir . '/app/Models/type.php',
     'App\\Policies\\ProjectPolicy' => $baseDir . '/app/Policies/ProjectPolicy.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
