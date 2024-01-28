@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProjectController;
+use App\Http\Controllers\admin\TypeController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Type;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,7 @@ Route::middleware(['auth', 'verified'])
     ->group(function() {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
+        Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug']);
 });
 
 require __DIR__.'/auth.php';

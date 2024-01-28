@@ -8,6 +8,9 @@
             </a>
         </div>
         <h1>{{ $project->title }}</h1>
+        <div>
+            Tipologia: {{ $project->type ? $project->type->name : 'Nessuna tipologia' }}
+        </div>
         @if ($project->cover_image)
             <div class="">
                 <img class="w-50" src="{{ asset('storage/' . $project->cover_image) }}" alt="">

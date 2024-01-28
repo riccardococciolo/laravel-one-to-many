@@ -29,6 +29,16 @@
                         <textarea class="form-control" id="content" rows="3" name="content">{{ old('content') }}</textarea>
                     </div>
 
+                    <div class="mb-2">
+                        <label for="type">Seleziona tipologia</label>
+                        <select class="form-select" name="type_id" id="type">
+                            <option @selected(!old('type_id')) value="">Nessuna tipologia</option>
+                            @foreach ($types as $type)
+                                <option @selected(old('type_id') == $type->id) value="{{ $type->id }}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="mb-3">
                         <label for="cover_image" class="form-label">Immagine</label>
                         <input class="form-control" type="file" id="cover_image" name="cover_image" value="{{ old('cover_image') }}">

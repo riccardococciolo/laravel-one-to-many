@@ -69,6 +69,12 @@
                                     <i class="fa-solid fa-bars-progress fa-lg fa-fw"></i> Progetti
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'dashboard' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-solid fa-bars-progress fa-lg fa-fw"></i> Tipologie
+                                </a>
+                            </li>
                         </ul>
 
 
